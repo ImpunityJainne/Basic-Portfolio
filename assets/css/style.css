@@ -2,6 +2,11 @@ body {
     background-image: url("../images/full-bloom/full-bloom.png");
 }
 
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
 .container {
     position: relative;
     color: #777777;
@@ -55,10 +60,25 @@ textarea {
 
 .menu {
     position: relative;
-    right: 0px;
+    float: right;
     text-align: right;
     line-height: 70px;
     height: 70px;
+    font-size: 0.7em;
+    color: #777777;
+}
+
+.menuItem:not(:first-child):before {
+    content: " | ";
+    padding-right: 15px;
+    color: #dddddd;
+
+}
+
+.menuItem {
+    padding-left: 15px;
+    position: relative;
+    float: left;
 }
 
 .contentHeader {
@@ -76,14 +96,19 @@ textarea {
     border: 1px solid #dddddd;
 }
 
-#footer {
+.footer {
     position: fixed;
     bottom: 0px;
     background: #666666;
-    font-size: 0.5em;
-    color: #ffffff;
     height: 50px;
     width: 100%;
-    text-align: center;
-    vertical-align: bottom;
+    border-top: 5px solid #4aaaa5;
+}
+
+.footerText {
+    position: absolute;
+    bottom: 3px;
+    font-size: 0.6em;
+    color: #ffffff;
+    padding-left: 45%;
 }
